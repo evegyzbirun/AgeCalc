@@ -36,5 +36,15 @@ export default class Years {
       return "wrong age"
     }
   }
+
+  ConvertAgeJupiter() {
+    let jupitermarsAge = []
+    if (this.age > 0) {
+      jupitermarsAge.push(this.age * this.jupiter);
+      return jupitermarsAge;
+    } else {
+      return "wrong age"
+    }
+  }
 }
 

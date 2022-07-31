@@ -22,6 +22,6 @@ describe('Years', () => {
   });
   test('convert earth age to Jupiter years', () => {
     let age = new Years(20);
-    expect(age.ConvertAge()).toEqual(237.2);
+    expect(age.ConvertAgeJupiter()).toEqual([237.2]);
   });
 });
