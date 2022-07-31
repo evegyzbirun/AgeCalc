@@ -68,12 +68,12 @@ describe('Life', () => {
     const personAge = new Years(60);
     const personActivity = new Years(70);
     const personSport = new Years(60);
-    const person = new Life("David", 60, 70, 60);
+    const person = new Life("David", 14.399999999999999, 16.8, 14.399999999999999);
     const over = person.Over();
-    const mercuryAge = personAge.ConvertAgeMercury(over);
     expect(personAge.ConvertAgeMercury()).toEqual([14.399999999999999]);
     expect(personActivity.ConvertAgeMercury()).toEqual([16.8]);
     expect(personSport.ConvertAgeMercury()).toEqual([14.399999999999999]);
+    expect(over).toEqual(1.200000000000001);
 
   });
 });
