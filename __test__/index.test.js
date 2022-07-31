@@ -1,6 +1,7 @@
 import Years from './../src/index.js';
 
 describe('Years', () => {
+
   test('shows age in earth years', () => {
     const earthYears = new Years(20);
     expect(earthYears.age).toEqual(20);
@@ -13,8 +14,8 @@ describe('Years', () => {
   });
   test('convert earth age to Venus years', () => {
     const age = new Years(20);
-    let pick = "venus";
-    expect(age.ConvertAge(pick)).toEqual(12.4);
+    const pick2 = "venus";
+    expect(age.ConvertAge(pick2)).toEqual(12.4);
   });
   test('convert earth age to Mars years', () => {
     const age = new Years(20);
@@ -24,6 +25,6 @@ describe('Years', () => {
   test('convert earth age to Jupiter years', () => {
     let age = new Years(20);
     let pick = age.pick;
-    expect(age.ConvertAge(pick)).toEqual(237.2);
+    expect(age.ConvertAge()).toEqual(237.2);
   });
 });
