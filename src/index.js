@@ -1,4 +1,4 @@
-export class Years {
+export default class Years {
   constructor(age) {
     this.age = age;
     this.mercury = 0.24;
