@@ -30,4 +30,14 @@ describe('Life', () => {
     expect(mercuryAgeTotal).toEqual([5.76]);
   });
 
+  test('how long the person will live on Venus', () => {
+    const personAge = new Years(38);
+    const person = new Life("James", 38);
+    person.activity = 70;
+    person.sport = 60;
+    const ageTotal = person.Expectancy();
+    const venusAgeTotal = personAge.ConvertAgeVenus(ageTotal);
+    expect(venusAgeTotal).toEqual([5.76]);
+  });
+
 });
