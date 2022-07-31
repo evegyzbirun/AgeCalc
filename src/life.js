@@ -10,4 +10,13 @@ export default class Life {
     const totall = (this.activity + this.sport) / 2;
     return totall - this.age;
   }
+
+  Over() {
+    const over = this.Expectancy() + this.age;
+    if (this.age > over) {
+      return over;
+    } else {
+      return "didn't over live"
+    }
+  }
 }

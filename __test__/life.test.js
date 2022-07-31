@@ -54,7 +54,13 @@ describe('Life', () => {
 
   test('how many years person overlive', () => {
     const person = new Life("David", 70, 70, 60);
-    const over = person.over();
-    expect(over).toEqual(24);
+    const over = person.Over();
+    expect(over).toEqual(65);
+  });
+
+  test('how many years person overlive', () => {
+    const person = new Life("David", 24, 70, 60);
+    const over = person.Over();
+    expect(over).toEqual("didn't over live");
   });
 });
