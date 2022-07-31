@@ -21,4 +21,9 @@ describe('Years', () => {
     const pick = "mars";
     expect(age.ConvertAge(pick)).toEqual(37.6);
   });
+  test('convert earth age to Jupiter years', () => {
+    const age = new Years(20);
+    const pick = "jupiter";
+    expect(age.ConvertAge(pick)).toEqual(237.2);
+  });
 });
