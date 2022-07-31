@@ -7,16 +7,24 @@ export default class Years {
     this.jupiter = 11.86;
   }
 
-  ConvertAge() {
-    //we input earth years and pick one of planets.
-    const pick = ["mercury", "venus", "mars", "jupiter"]
-    pick.forEach(e => {
-      if (pick[e] === "mercury") {
-        return this.age * this.mercury;
-      } else (pick[e] === "venus");
-      return this.age * this.venus;
-    });
+  ConvertAgeMercury() {
+    let mercuryAge = []
+    if (this.age > 0) {
+      mercuryAge.push(this.age * this.mercury);
+      return mercuryAge;
+    } else {
+      return "wrong age"
+    }
+  }
 
+  ConvertAgeVenus() {
+    let venusAge = []
+    if (this.age > 0) {
+      venusAge.push(this.age * this.venus);
+      return venusAge;
+    } else {
+      return "wrong age"
+    }
   }
 }
 

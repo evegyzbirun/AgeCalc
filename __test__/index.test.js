@@ -9,13 +9,11 @@ describe('Years', () => {
 
   test('convert earth age to Mercury years', () => {
     const age = new Years(20);
-    let pick = "mercury";
-    expect(age.ConvertAge(pick)).toEqual(4.8);
+    expect(age.ConvertAgeMercury()).toEqual([4.8]);
   });
   test('convert earth age to Venus years', () => {
     const age = new Years(20);
-    const pick2 = "venus";
-    expect(age.ConvertAge(pick2)).toEqual(12.4);
+    expect(age.ConvertAgeVenus()).toEqual([12.4]);
   });
   test('convert earth age to Mars years', () => {
     const age = new Years(20);
