@@ -23,4 +23,9 @@ describe('Years', () => {
     let age = new Years(20);
     expect(age.ConvertAgeJupiter()).toEqual([237.2]);
   });
+
+  test('when we got wrong age', () => {
+    let age = new Years(-5);
+    expect(age.ConvertAgeJupiter()).toEqual("wrong age");
+  });
 });
