@@ -1,7 +1,9 @@
 export default class Life {
-  constructor(name, activity, age,) {
+  constructor(name, age, activity, sport) {
     this.name = name;
-    this.activity = activity;
     this.age = age;
+    this.activity = activity;
+    this.sport = sport;
+
   }
 }
