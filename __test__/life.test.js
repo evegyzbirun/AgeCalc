@@ -26,8 +26,8 @@ describe('Life', () => {
     person.activity = 70;
     person.sport = 60;
     const ageTotal = person.Expectancy();
-    const mercuryAgeTotal = person.ConvertAgeMercury(ageTotal);
-    expect(mercuryAgeTotal).toEqual(10);
+    const mercuryAgeTotal = personAge.ConvertAgeMercury(ageTotal);
+    expect(mercuryAgeTotal).toEqual([5.76]);
   });
 
 });
