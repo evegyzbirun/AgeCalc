@@ -47,6 +47,6 @@ describe('Life', () => {
     person.sport = 60;
     const ageTotal = person.Expectancy();
     const marsAgeTotal = personAge.ConvertAgeMars(ageTotal);
-    expect(marsAgeTotal).toEqual([0]);
+    expect(marsAgeTotal).toEqual([50.76]);
   });
 });
