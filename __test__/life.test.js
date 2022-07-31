@@ -19,4 +19,15 @@ describe('Life', () => {
     expect(person.activity).toEqual(70);
     expect(person.sport).toEqual(60);
   });
+
+  test('how long the person will live on Mercury', () => {
+    const personAge = new Years(24);
+    const person = new Life("Kory", 24);
+    person.activity = 70;
+    person.sport = 60;
+    const ageTotal = person.Expectancy();
+    const mercuryAgeTotal = person.ConvertAgeMercury(ageTotal);
+    expect(mercuryAgeTotal).toEqual(10);
+  });
+
 });
