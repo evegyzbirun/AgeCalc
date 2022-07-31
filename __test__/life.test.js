@@ -32,7 +32,7 @@ describe('Life', () => {
 
   test('how namy venus years the person will live on Venus', () => {
     const personAge = new Years(38);
-    const person = new Life("James", 38);
+    const person = new Life("James", 38, 70, 60);
     person.activity = 70;
     person.sport = 60;
     const ageTotal = person.Expectancy();
@@ -40,4 +40,13 @@ describe('Life', () => {
     expect(venusAgeTotal).toEqual([23.56]);
   });
 
+  test('how namy mars years the person will live on Mars', () => {
+    const personAge = new Years(27);
+    const person = new Life("Alex", 27, 70, 60);
+    person.activity = 70;
+    person.sport = 60;
+    const ageTotal = person.Expectancy();
+    const marsAgeTotal = personAge.ConvertAgeMars(ageTotal);
+    expect(marsAgeTotal).toEqual([0]);
+  });
 });
