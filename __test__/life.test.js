@@ -49,4 +49,14 @@ describe('Life', () => {
     const marsAgeTotal = personAge.ConvertAgeMars(ageTotal);
     expect(marsAgeTotal).toEqual([50.76]);
   });
+
+  test('how namy mars years the person will live on Mars', () => {
+    const personAge = new Years(23);
+    const person = new Life("Emma", 23, 70, 60);
+    person.activity = 70;
+    person.sport = 60;
+    const ageTotal = person.Expectancy();
+    const jupiterAgeTotal = personAge.ConvertAgeJupiter(ageTotal);
+    expect(jupiterAgeTotal).toEqual([50.76]);
+  });
 });
