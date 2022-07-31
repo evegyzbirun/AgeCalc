@@ -4,6 +4,10 @@ export default class Life {
     this.age = age;
     this.activity = activity;
     this.sport = sport;
+  }
 
+  Expectancy() {
+    const totall = (this.activity + this.sport) / 2;
+    return totall - this.age;
   }
 }
