@@ -1,0 +1,1 @@
+import Life from './../src/life.js';

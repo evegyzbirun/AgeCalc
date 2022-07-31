@@ -25,4 +25,3 @@ describe('Years', () => {
     expect(age.ConvertAgeJupiter()).toEqual([237.2]);
   });
 });
-.
