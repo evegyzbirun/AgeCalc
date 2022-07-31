@@ -16,5 +16,9 @@ describe('Years', () => {
     const pick = "venus";
     expect(age.ConvertAge(pick)).toEqual(12.4);
   });
-
+  test('convert earth age to Mars years', () => {
+    const age = new Years(20);
+    const pick = "mars";
+    expect(age.ConvertAge(pick)).toEqual(37.6);
+  });
 });
