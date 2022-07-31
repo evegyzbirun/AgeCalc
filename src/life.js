@@ -12,7 +12,7 @@ export default class Life {
   }
 
   Over() {
-    const over = this.Expectancy() + this.age;
+    const over = this.Expectancy();
     if (this.age > over) {
       return over;
     } else {

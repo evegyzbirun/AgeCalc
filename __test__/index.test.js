@@ -17,8 +17,7 @@ describe('Years', () => {
   });
   test('convert earth age to Mars years', () => {
     const age = new Years(20);
-    let x = age.x
-    expect(age.ConvertAgeMars(x)).toEqual([37.599999999999994]);
+    expect(age.ConvertAgeMars()).toEqual([37.599999999999994]);
   });
   test('convert earth age to Jupiter years', () => {
     let age = new Years(20);

@@ -55,12 +55,25 @@ describe('Life', () => {
   test('how many years person overlive', () => {
     const person = new Life("David", 70, 70, 60);
     const over = person.Over();
-    expect(over).toEqual(65);
+    expect(over).toEqual(-5);
   });
 
   test('how many years person overlive', () => {
     const person = new Life("David", 24, 70, 60);
     const over = person.Over();
     expect(over).toEqual("didn't over live");
+  });
+
+  test('how many mercury years person overlive on Mercury', () => {
+    const personAge = new Years(60);
+    const personActivity = new Years(70);
+    const personSport = new Years(60);
+    const person = new Life("David", 60, 70, 60);
+    const over = person.Over();
+    const mercuryAge = personAge.ConvertAgeMercury(over);
+    expect(personAge.ConvertAgeMercury()).toEqual([14.399999999999999]);
+    expect(personActivity.ConvertAgeMercury()).toEqual([16.8]);
+    expect(personSport.ConvertAgeMercury()).toEqual([14.399999999999999]);
+
   });
 });
