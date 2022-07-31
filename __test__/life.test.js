@@ -22,9 +22,7 @@ describe('Life', () => {
 
   test('how namy mercury years the person will live on Mercury', () => {
     const personAge = new Years(24);
-    const person = new Life("Kory", 24);
-    person.activity = 70;
-    person.sport = 60;
+    const person = new Life("Kory", 24, 70, 60);
     const ageTotal = person.Expectancy();
     const mercuryAgeTotal = personAge.ConvertAgeMercury(ageTotal);
     expect(mercuryAgeTotal).toEqual([5.76]);
@@ -33,8 +31,6 @@ describe('Life', () => {
   test('how namy venus years the person will live on Venus', () => {
     const personAge = new Years(38);
     const person = new Life("James", 38, 70, 60);
-    person.activity = 70;
-    person.sport = 60;
     const ageTotal = person.Expectancy();
     const venusAgeTotal = personAge.ConvertAgeVenus(ageTotal);
     expect(venusAgeTotal).toEqual([23.56]);
@@ -43,8 +39,6 @@ describe('Life', () => {
   test('how namy mars years the person will live on Mars', () => {
     const personAge = new Years(27);
     const person = new Life("Alex", 27, 70, 60);
-    person.activity = 70;
-    person.sport = 60;
     const ageTotal = person.Expectancy();
     const marsAgeTotal = personAge.ConvertAgeMars(ageTotal);
     expect(marsAgeTotal).toEqual([50.76]);
@@ -53,10 +47,14 @@ describe('Life', () => {
   test('how namy mars years the person will live on Mars', () => {
     const personAge = new Years(23);
     const person = new Life("Emma", 23, 70, 60);
-    person.activity = 70;
-    person.sport = 60;
     const ageTotal = person.Expectancy();
     const jupiterAgeTotal = personAge.ConvertAgeJupiter(ageTotal);
     expect(jupiterAgeTotal).toEqual([272.78]);
+  });
+
+  test('how many years person overlive', () => {
+    const person = new Life("David", 70, 70, 60);
+    const over = person.over();
+    expect(over).toEqual(24);
   });
 });
