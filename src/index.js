@@ -26,5 +26,15 @@ export default class Years {
       return "wrong age"
     }
   }
+
+  ConvertAgeMars() {
+    let marsAge = []
+    if (this.age > 0) {
+      marsAge.push(this.age * this.mars);
+      return marsAge;
+    } else {
+      return "wrong age"
+    }
+  }
 }
 
