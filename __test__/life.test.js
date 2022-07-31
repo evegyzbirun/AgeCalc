@@ -57,6 +57,6 @@ describe('Life', () => {
     person.sport = 60;
     const ageTotal = person.Expectancy();
     const jupiterAgeTotal = personAge.ConvertAgeJupiter(ageTotal);
-    expect(jupiterAgeTotal).toEqual([50.76]);
+    expect(jupiterAgeTotal).toEqual([272.78]);
   });
 });
