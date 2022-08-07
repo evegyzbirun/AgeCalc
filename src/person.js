@@ -1,5 +1,5 @@
 export default class Person {
-  constructor(name, age, activity) {
+  constructor(name, age, activity, planet) {
     this.name = name;
     this.age = age;
     this.expectancy = 70;
@@ -8,15 +8,16 @@ export default class Person {
     this.venusYears = 0;
     this.marsYears = 0;
     this.jupiterYears = 0;
+    this.planet = planet;
   }
 
   ConvertMercuryAge() {
-    this.mercuryYears = this.age * 0.24;
+    this.mercuryYears = this.age * .24;
     return this.mercuryYears;
   }
 
   ConvertVenusAge() {
-    this.venusYears = this.age * 0.62;
+    this.venusYears = this.age * .62;
     return this.venusYears;
   }
 
@@ -30,7 +31,26 @@ export default class Person {
     return this.jupiterYears;
   }
 
-
+  Expectancy() {
+    if (this.planet === 'mer') {
+      let merExpectancy = (this.expectancy - this.age) * .24;
+      return merExpectancy;
+    }
+    // else if (planet === 'ven') {
+    //   let venExpectancy = this.expectancy * .62;
+    //   return venExpectancy;
+    // } else if (planet === 'mar') {
+    //   let marExpectancy = this.expectancy * 1.88;
+    //   return marExpectancy;
+    // } else if (planet === 'jup') {
+    //   let jupExpectancy = this.expectancy * 11.86;
+    //   return jupExpectancy;
+    //}
+    else {
+      let result = (this.expectancy - this.age);
+      return result;
+    }
+  }
 }
 
 

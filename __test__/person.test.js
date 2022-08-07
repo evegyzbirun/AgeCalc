@@ -18,14 +18,18 @@ describe('Person', () => {
   });
 
   test('life expectancy on Earth', () => {
-    const age = new Person(60);
+    const age = new Person("Alex", 60);
+
     expect(age.Expectancy()).toEqual(10);
   });
 
-  test('life expectancy on other planets', () => {
-    const mercury = new Person(40);
-    const ExpMercury = ConvertMercuryAge(mercury);
-    expect(ExpMercury.Expectancy()).toEqual(7);
+  test('life expectancy on Mercury', () => {
+    const age = new Person("Alex", 40, 5, 'mer');
+    expect(age.Expectancy()).toEqual(7.199999999999999);
+  });
+
+  test('life expectancy on Venus', () => {
+    const age = new Person("Alex", 35, 5, 'ven');
+    expect(age.Expectancy()).toEqual(7.199999999999999);
   });
 });
-16.8 
