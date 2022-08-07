@@ -35,20 +35,16 @@ export default class Person {
     if (this.planet === 'mer') {
       let merExpectancy = (this.expectancy - this.age) * .24;
       return merExpectancy;
-    }
-    else if (this.planet === 'ven') {
+    } else if (this.planet === 'ven') {
       let venExpectancy = (this.expectancy - this.age) * .62;
       return venExpectancy;
-    }
-    else if (this.planet === 'mar') {
+    } else if (this.planet === 'mar') {
       let marExpectancy = (this.expectancy - this.age) * 1.88;
       return marExpectancy;
-    }
-    //else if (planet === 'jup') {
-    //   let jupExpectancy = this.expectancy * 11.86;
-    //   return jupExpectancy;
-    //}
-    else {
+    } else if (this.planet === 'jup') {
+      let jupExpectancy = this.expectancy * 11.86;
+      return jupExpectancy;
+    } else {
       let result = (this.expectancy - this.age);
       return result;
     }

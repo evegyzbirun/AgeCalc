@@ -37,4 +37,9 @@ describe('Person', () => {
     const age = new Person("John", 43, 5, 'mar');
     expect(age.Expectancy()).toEqual(50.76);
   });
+
+  test('life expectancy on Jupiter', () => {
+    const age = new Person("John", 50, 5, 'jup');
+    expect(age.Expectancy()).toEqual(50.76);
+  });
 });
