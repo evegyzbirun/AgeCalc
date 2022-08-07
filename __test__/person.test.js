@@ -72,4 +72,32 @@ describe('Person', () => {
     const age = new Person("John", 50, "not active", 'earth');
     expect(age.Active()).toEqual(10);
   });
+
+  test('life expectancy on Mercury with active life', () => {
+    const age = new Person("John", 43, "active", 'mer');
+    age.expectancy += 5;
+    const expectancyActive = age.Expectancy();
+    expect(expectancyActive).toEqual(7.68);
+  });
+
+  test('life expectancy on Venus with active life', () => {
+    const age = new Person("John", 33, "active", 'ven');
+    age.expectancy += 5;
+    const expectancyActive = age.Expectancy();
+    expect(expectancyActive).toEqual(26.04);
+  });
+
+  test('life expectancy on Mars with active life', () => {
+    const age = new Person("John", 43, "active", 'mar');
+    age.expectancy += 5;
+    const expectancyActive = age.Expectancy();
+    expect(expectancyActive).toEqual(60.16);
+  });
+
+  test('life expectancy on Jupiter with active life', () => {
+    const age = new Person("John", 43, "active", 'jup');
+    age.expectancy += 5;
+    const expectancyActive = age.Expectancy();
+    expect(expectancyActive).toEqual(379.52);
+  });
 });
