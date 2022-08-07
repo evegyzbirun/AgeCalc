@@ -58,7 +58,7 @@ describe('Person', () => {
   });
 
   test('life expectancy on Earth if person has active life', () => {
-    const age = new Person("John", 43, 5, 'earth');
-    expect(age.).toEqual(50.76);
+    const age = new Person("John", 43, "active", 'earth');
+    expect(age.Active()).toEqual(32);
   });
 });

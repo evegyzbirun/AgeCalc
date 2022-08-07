@@ -57,11 +57,16 @@ export default class Person {
       return "valid";
     }
   }
+  Active() {
+    if (this.activity === "active") {
+      this.expectancy += 5;
+      let resultActiv = (this.expectancy - this.age);
+      return resultActiv;
+    } else {
+      this.expectancy -= 10;
+      let resultActiv = (this.expectancy - this.age);
+      return resultActiv;
+
+    }
+  }
 }
-
-
-
-
-
-
-
