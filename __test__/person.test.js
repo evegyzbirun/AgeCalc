@@ -32,4 +32,9 @@ describe('Person', () => {
     const age = new Person("Alex", 35, 5, 'ven');
     expect(age.Expectancy()).toEqual(21.7);
   });
+
+  test('life expectancy on Mars', () => {
+    const age = new Person("John", 43, 5, 'mar');
+    expect(age.Expectancy()).toEqual(21.7);
+  });
 });

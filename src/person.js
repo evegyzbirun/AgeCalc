@@ -40,10 +40,11 @@ export default class Person {
       let venExpectancy = (this.expectancy - this.age) * .62;
       return venExpectancy;
     }
-    //else if (planet === 'mar') {
-    //   let marExpectancy = this.expectancy * 1.88;
-    //   return marExpectancy;
-    // } else if (planet === 'jup') {
+    else if (this.planet === 'mar') {
+      let marExpectancy = (this.expectancy - this.age) * 1.88;
+      return marExpectancy;
+    }
+    //else if (planet === 'jup') {
     //   let jupExpectancy = this.expectancy * 11.86;
     //   return jupExpectancy;
     //}
