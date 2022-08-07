@@ -35,6 +35,6 @@ describe('Person', () => {
 
   test('life expectancy on Mars', () => {
     const age = new Person("John", 43, 5, 'mar');
-    expect(age.Expectancy()).toEqual(21.7);
+    expect(age.Expectancy()).toEqual(50.76);
   });
 });
