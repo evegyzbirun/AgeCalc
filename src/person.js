@@ -49,6 +49,14 @@ export default class Person {
       return result;
     }
   }
+
+  CheckAge() {
+    if ((this.age > 80) || (this.age < 0)) {
+      return "not valid";
+    } else {
+      return "valid";
+    }
+  }
 }
 
 

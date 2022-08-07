@@ -45,11 +45,15 @@ describe('Person', () => {
 
   test('valid age is from 0 to 80 ', () => {
     const age = new Person("John", 48, 5);
-    expect().toEqual("valid");
+    expect(age.CheckAge()).toEqual("valid");
   });
 
   test('valid age is from 0 to 80 ', () => {
-    const age = new Person("John", 81, 5);
-    expect().toEqual("not valid");
+    const age = new Person("Max", 81, 5);
+    expect(age.CheckAge()).toEqual("not valid");
+  });
+  test('valid age is from 0 to 80 ', () => {
+    const age = new Person("Max", -81, 5);
+    expect(age.CheckAge()).toEqual("not valid");
   });
 });
