@@ -42,4 +42,9 @@ describe('Person', () => {
     const age = new Person("John", 50, 5, 'jup');
     expect(age.Expectancy()).toEqual(237.2);
   });
+
+  test('valid age is from 0 to 80 ', () => {
+    const age = new Person("John", 48, 5);
+    expect().toEqual("valid");
+  });
 });
