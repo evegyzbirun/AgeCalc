@@ -23,6 +23,12 @@ describe('Person', () => {
     expect(age.Expectancy()).toEqual(10);
   });
 
+  test('over life expectancy on Earth', () => {
+    const age = new Person("Alex", 90, 5, 'earth');
+
+    expect(age.Expectancy()).toEqual(-20);
+  });
+
   test('life expectancy on Mercury', () => {
     const age = new Person("Alex", 40, 5, 'mer');
     expect(age.Expectancy()).toEqual(7.199999999999999);
