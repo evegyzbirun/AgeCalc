@@ -17,20 +17,15 @@ describe('Person', () => {
     expect(personAge.name).toEqual("Alex");
   });
 
-  test('incorrect age', () => {
-    let age = new Person(-5);
-    expect(age.Age()).toEqual("wrong age");
-  });
-
   test('life expectancy on Earth', () => {
     const age = new Person(60);
-    expect(age.expectancy()).toEqual(10);
+    expect(age.Expectancy()).toEqual(10);
   });
 
   test('life expectancy on other planets', () => {
     const mercury = new Person(40);
-
-    expect(age.expectancy()).toEqual(7);
+    const ExpMercury = ConvertMercuryAge(mercury);
+    expect(ExpMercury.Expectancy()).toEqual(7);
   });
 });
 16.8 

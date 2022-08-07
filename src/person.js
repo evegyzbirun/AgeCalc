@@ -30,17 +30,11 @@ export default class Person {
     return this.jupiterYears;
   }
 
-  Age() {
-    if (18 < this.age && this.age < 80) {
-      return "correct age";
-    } else {
-      return "wrong age";
-    }
-  }
-  Expectancy() {
 
-  }
 }
+
+
+
 
 
 
