@@ -100,4 +100,11 @@ describe('Person', () => {
     const expectancyActive = age.Expectancy();
     expect(expectancyActive).toEqual(379.52);
   });
+
+  test('life expectancy on Jupiter with not active life', () => {
+    const age = new Person("John", 43, "not active", 'jup');
+    age.expectancy -= 10;
+    const expectancyActive = age.Expectancy();
+    expect(expectancyActive).toEqual(201.62);
+  });
 });
