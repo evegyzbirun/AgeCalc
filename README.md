@@ -38,24 +38,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Tests
 ** Input early years:
-test('convert earth age to Mercury years', () => {
-    const age = new Years(20);
-    expect(age.ConvertAgeMercury()).toEqual([4.8]);
-  });
-  test('convert earth age to Venus years', () => {
-    const age = new Years(20);
-    expect(age.ConvertAgeVenus()).toEqual([12.4]);
-  });
-  test('convert earth age to Mars years', () => {
-    const age = new Years(20);
-    expect(age.ConvertAgeMars()).toEqual([37.599999999999994]);
-  });
-  test('convert earth age to Jupiter years', () => {
-    let age = new Years(20);
-    expect(age.ConvertAgeJupiter()).toEqual([237.2]);
+test('convert earth age to Mercury years, Venus years, Mars years, Jupiter years', () => {
+    const personAge = new Person("Alex", 20);
+    expect(personAge.ConvertMercuryAge()).toEqual(4.8);
+    expect(personAge.ConvertVenusAge()).toEqual(12.4);
+    expect(personAge.ConvertMarsAge()).toEqual(37.599999999999994);
+    expect(personAge.ConvertJupiterAge()).toEqual(237.2)
+    expect(personAge.name).toEqual("Alex");
   });
    test('person with name and age', () => {
-    const person = new Life("Maria", 22);
+    const person = new Person("Maria", 22);
     expect(person.name).toEqual("Maria");
     expect(person.age).toEqual(22);
   });
