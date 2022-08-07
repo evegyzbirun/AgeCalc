@@ -60,13 +60,12 @@ export default class Person {
   Active() {
     if (this.activity === "active") {
       this.expectancy += 5;
-      let resultActiv = (this.expectancy - this.age);
-      return resultActiv;
+      this.expectancy = (this.expectancy - this.age);
+      return this.expectancy;
     } else {
       this.expectancy -= 10;
-      let resultActiv = (this.expectancy - this.age);
-      return resultActiv;
-
+      this.expectancy = (this.expectancy - this.age);
+      return this.expectancy;
     }
   }
 }
