@@ -1,31 +1,41 @@
-import Years from './../src/index.js';
+import Person from '../src/person.js';
 
-describe('Years', () => {
+describe('Person', () => {
 
   test('shows age in earth years', () => {
-    const earthYears = new Years(20);
+    const earthYears = new Person(20);
     expect(earthYears.age).toEqual(20);
   });
 
   test('convert earth age to Mercury years', () => {
-    const age = new Years(20);
+    const age = new Person(20);
     expect(age.ConvertAgeMercury()).toEqual([4.8]);
   });
   test('convert earth age to Venus years', () => {
-    const age = new Years(20);
+    const age = new Person(20);
     expect(age.ConvertAgeVenus()).toEqual([12.4]);
   });
   test('convert earth age to Mars years', () => {
-    const age = new Years(20);
+    const age = new Person(20);
     expect(age.ConvertAgeMars()).toEqual([37.599999999999994]);
   });
   test('convert earth age to Jupiter years', () => {
-    let age = new Years(20);
+    let age = new Person(20);
     expect(age.ConvertAgeJupiter()).toEqual([237.2]);
   });
 
   test('when we got wrong age', () => {
-    let age = new Years(-5);
+    let age = new Person(-5);
     expect(age.ConvertAgeJupiter()).toEqual("wrong age");
+  });
+
+  test('life expectancy on Earth', () => {
+
+    expect(age.expectancy()).toEqual();
+  });
+
+  test('life expectancy on other planets', () => {
+
+    expect(age.expectancy()).toEqual();
   });
 });
