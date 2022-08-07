@@ -47,4 +47,9 @@ describe('Person', () => {
     const age = new Person("John", 48, 5);
     expect().toEqual("valid");
   });
+
+  test('valid age is from 0 to 80 ', () => {
+    const age = new Person("John", 81, 5);
+    expect().toEqual("not valid");
+  });
 });
