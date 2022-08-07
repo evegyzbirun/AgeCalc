@@ -1,52 +1,47 @@
 export default class Person {
-  constructor(age) {
+  constructor(name, age, activity) {
+    this.name = name;
     this.age = age;
-    this.mercury = 0.24;
-    this.venus = 0.62;
-    this.mars = 1.88;
-    this.jupiter = 11.86;
+    this.expectancy = 70;
+    this.activity = activity;
+    this.mercuryYears = 0;
+    this.venusYears = 0;
+    this.marsYears = 0;
+    this.jupiterYears = 0;
   }
 
-  ConvertAgeMercury() {
-    let mercuryAge = []
-    if (this.age > 0) {
-      mercuryAge.push(this.age * this.mercury);
-      return mercuryAge;
+  ConvertMercuryAge() {
+    this.mercuryYears = this.age * 0.24;
+    return this.mercuryYears;
+  }
+
+  ConvertVenusAge() {
+    this.venusYears = this.age * 0.62;
+    return this.venusYears;
+  }
+
+  ConvertMarsAge() {
+    this.marsYears = this.age * 1.88;
+    return this.marsYears;
+  }
+
+  ConvertJupiterAge() {
+    this.jupiterYears = this.age * 11.86;
+    return this.jupiterYears;
+  }
+
+  Age() {
+    if (18 < this.age && this.age < 80) {
+      return "correct age";
     } else {
-      return "wrong age"
+      return "wrong age";
     }
   }
+  Expectancy() {
 
-  ConvertAgeVenus() {
-    let venusAge = []
-    if (this.age > 0) {
-      venusAge.push(this.age * this.venus);
-      return venusAge;
-    } else {
-      return "wrong age"
-    }
   }
-
-  ConvertAgeMars() {
-    let marsAge = []
-    if (this.age > 0) {
-      marsAge.push(this.age * this.mars);
-      return marsAge;
-    } else {
-      return "wrong age"
-    }
-  }
-
-  ConvertAgeJupiter() {
-    let jupitermarsAge = []
-    if (this.age > 0) {
-      jupitermarsAge.push(this.age * this.jupiter);
-      return jupitermarsAge;
-    } else {
-      return "wrong age"
-    }
-  }
-
 }
+
+
 
 
