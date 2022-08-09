@@ -30,7 +30,11 @@ export default class Person {
   }
 
   expectancyEarth() {
-
+    if (this.expectancy >= this.age) {
+      return `You still have ${this.expectancy - this.age} years to live on Earth`;
+    } else {
+      return `You have lived ${this.age - this.expectancy} years longer than expected`
+    }
   }
   // Expectancy() {
   //   if (this.planet === 'mer') {

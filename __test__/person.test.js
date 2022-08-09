@@ -35,7 +35,7 @@ describe('Person', () => {
   test('how long expectancy on Earth', () => {
     const person = new Person("John", 42);
     expect(person.name).toEqual("John");
-    expect(person.expectancyEarth()).toEqual('');
+    expect(person.expectancyEarth()).toEqual('You still have  years to live on Earth');
   })
 
   test('', () => {
