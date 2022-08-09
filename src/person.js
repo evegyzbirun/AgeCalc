@@ -36,6 +36,10 @@ export default class Person {
       return `You have lived ${this.age - this.expectancy} years longer than expected`
     }
   }
+
+  expectancyMercury() {
+
+  }
   // Expectancy() {
   //   if (this.planet === 'mer') {
   //     this.expectancy = (this.expectancy - this.age) * .24;
