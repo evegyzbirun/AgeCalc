@@ -33,7 +33,7 @@ export default class Person {
     if (this.expectancy >= this.age) {
       return `You still have ${this.expectancy - this.age} years to live on Earth`;
     } else {
-      return `You have lived ${this.age - this.expectancy} years longer than expected`
+      return `You have lived ${this.age - this.expectancy} years longer than expected`;
     }
   }
 
@@ -41,15 +41,15 @@ export default class Person {
     if (this.expectancy >= this.age) {
       return `You still have ${(this.expectancy - this.age) * .24} years to live on Mercury`;
     } else {
-      return `You have lived ${(this.age - this.expectancy) * .24} years longer than expected`
+      return `You have lived ${(this.age - this.expectancy) * .24} years longer than expected`;
     }
   }
 
   expectancyVenus() {
     if (this.expectancy >= this.age) {
-      return `You still have ${(this.expectancy - this.age) * .62} years to live on Venus`;
+      return `You still have ${(this.expectancy - this.age) * 1.86} years to live on Venus`;
     } else {
-      return `You have lived ${(this.age - this.expectancy) * .62} years longer than expected`
+      return `You have lived ${(this.age - this.expectancy) * 11.86} years longer than expected`;
     }
   }
 
@@ -57,12 +57,16 @@ export default class Person {
     if (this.expectancy >= this.age) {
       return `You still have ${(this.expectancy - this.age) * 1.88} years to live on Mars`;
     } else {
-      return `You have lived ${(this.age - this.expectancy) * 1.88} years longer than expected`
+      return `You have lived ${(this.age - this.expectancy) * 1.88} years longer than expected`;
     }
   }
 
   expectancyJupiter() {
-
+    if (this.expectancy >= this.age) {
+      return `You still have ${(this.expectancy - this.age) * 1.88} years to live on Jupiter`;
+    } else {
+      return `You have lived ${(this.age - this.expectancy) * 1.88} years longer than expected`;
+    }
   }
   // Expectancy() {
   //   if (this.planet === 'mer') {
