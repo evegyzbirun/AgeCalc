@@ -54,7 +54,11 @@ export default class Person {
   }
 
   expectancyMars() {
-
+    if (this.expectancy >= this.age) {
+      return `You still have ${(this.expectancy - this.age) * 1.88} years to live on Mars`;
+    } else {
+      return `You have lived ${(this.age - this.expectancy) * 1.88} years longer than expected`
+    }
   }
 
   expectancyJupiter() {
