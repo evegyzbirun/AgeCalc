@@ -11,22 +11,18 @@ export default class Person {
 
   convertMercuryAge() {
     this.mercuryYears = this.age * .24;
-    return this.mercuryYears;
   }
 
   convertVenusAge() {
     this.venusYears = this.age * .62;
-    return this.venusYears;
   }
 
   convertMarsAge() {
     this.marsYears = this.age * 1.88;
-    return this.marsYears;
   }
 
   convertJupiterAge() {
     this.jupiterYears = this.age * 11.86;
-    return this.jupiterYears;
   }
 
   expectancyEarth() {
@@ -35,7 +31,7 @@ export default class Person {
     } else {
       return `You have lived ${this.age - this.expectancy} years longer than expected`;
     }
-  }
+  };
 
   expectancyMercury() {
     if (this.expectancy >= this.age) {
@@ -68,16 +64,4 @@ export default class Person {
       return `You have lived ${(this.age - this.expectancy) * 11.86} years longer than expected`;
     }
   }
-
-  // Active() {
-  //   if (this.activity === "active") {
-  //     this.expectancy += 5;
-  //     this.expectancy = (this.expectancy - this.age);
-  //     return this.expectancy;
-  //   } else {
-  //     this.expectancy -= 10;
-  //     this.expectancy = (this.expectancy - this.age);
-  //     return this.expectancy;
-  //   }
-  // }
 }
