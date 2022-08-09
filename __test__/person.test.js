@@ -67,4 +67,13 @@ describe('Person', () => {
     expect(personOld.name).toEqual("John");
     expect(personOld.expectancyMars()).toEqual('You have lived 30.08 years longer than expected');
   })
+
+  test('for how long the person left to live on Jupiter', () => {
+    const person = new Person("John", 22);
+    const personOld = new Person("John", 88);
+    expect(person.name).toEqual("John");
+    expect(person.expectancyJupiter()).toEqual('You still have 62.04 years to live on Jupiter');
+    expect(personOld.name).toEqual("John");
+    expect(personOld.expectancyJupiter()).toEqual('You have lived 30.08 years longer than expected');
+  })
 });
