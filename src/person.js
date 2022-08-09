@@ -1,71 +1,66 @@
 export default class Person {
-  constructor(name, age, activity, planet) {
+  constructor(name, age) {
     this.name = name;
     this.age = age;
     this.expectancy = 70;
-    this.activity = activity;
     this.mercuryYears = 0;
     this.venusYears = 0;
     this.marsYears = 0;
     this.jupiterYears = 0;
-    this.planet = planet;
   }
 
-  ConvertMercuryAge() {
+  convertMercuryAge() {
     this.mercuryYears = this.age * .24;
     return this.mercuryYears;
   }
 
-  ConvertVenusAge() {
+  convertVenusAge() {
     this.venusYears = this.age * .62;
     return this.venusYears;
   }
 
-  ConvertMarsAge() {
+  convertMarsAge() {
     this.marsYears = this.age * 1.88;
     return this.marsYears;
   }
 
-  ConvertJupiterAge() {
+  convertJupiterAge() {
     this.jupiterYears = this.age * 11.86;
     return this.jupiterYears;
   }
 
-  Expectancy() {
-    if (this.planet === 'mer') {
-      this.expectancy = (this.expectancy - this.age) * .24;
-      return this.expectancy;
-    } else if (this.planet === 'ven') {
-      this.expectancy = (this.expectancy - this.age) * .62;
-      return this.expectancy;
-    } else if (this.planet === 'mar') {
-      this.expectancy = (this.expectancy - this.age) * 1.88;
-      return this.expectancy;
-    } else if (this.planet === 'jup') {
-      this.expectancy = (this.expectancy - this.age) * 11.86;;
-      return this.expectancy;
-    } else {
-      this.expectancy = (this.expectancy - this.age);
-      return this.expectancy;
-    }
-  }
+  expectancyEarth() {
 
-  CheckAge() {
-    if ((this.age > 80) || (this.age < 0)) {
-      return "not valid";
-    } else {
-      return "valid";
-    }
   }
-  Active() {
-    if (this.activity === "active") {
-      this.expectancy += 5;
-      this.expectancy = (this.expectancy - this.age);
-      return this.expectancy;
-    } else {
-      this.expectancy -= 10;
-      this.expectancy = (this.expectancy - this.age);
-      return this.expectancy;
-    }
-  }
+  // Expectancy() {
+  //   if (this.planet === 'mer') {
+  //     this.expectancy = (this.expectancy - this.age) * .24;
+  //     return this.expectancy;
+  //   } else if (this.planet === 'ven') {
+  //     this.expectancy = (this.expectancy - this.age) * .62;
+  //     return this.expectancy;
+  //   } else if (this.planet === 'mar') {
+  //     this.expectancy = (this.expectancy - this.age) * 1.88;
+  //     return this.expectancy;
+  //   } else if (this.planet === 'jup') {
+  //     this.expectancy = (this.expectancy - this.age) * 11.86;;
+  //     return this.expectancy;
+  //   } else {
+  //     this.expectancy = (this.expectancy - this.age);
+  //     return this.expectancy;
+  //   }
+  // }
+
+
+  // Active() {
+  //   if (this.activity === "active") {
+  //     this.expectancy += 5;
+  //     this.expectancy = (this.expectancy - this.age);
+  //     return this.expectancy;
+  //   } else {
+  //     this.expectancy -= 10;
+  //     this.expectancy = (this.expectancy - this.age);
+  //     return this.expectancy;
+  //   }
+  // }
 }
