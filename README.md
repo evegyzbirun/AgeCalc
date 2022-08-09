@@ -37,18 +37,16 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Tests
-** Input early years:
-test('convert earth age to Mercury years, Venus years, Mars years, Jupiter years', () => {
+
+  test('Earth age and name', () => {
+    const personOne = new Person("Alex", 20);
+    expect(personOne.name).toEqual("Alex");
+    expect(personOne.age).toEqual(20);
+  });
+
+  test('convert earth age to Jupiter years', () => {
     const personAge = new Person("Alex", 20);
-    expect(personAge.ConvertMercuryAge()).toEqual(4.8);
-    expect(personAge.ConvertVenusAge()).toEqual(12.4);
-    expect(personAge.ConvertMarsAge()).toEqual(37.599999999999994);
-    expect(personAge.ConvertJupiterAge()).toEqual(237.2)
-    expect(personAge.name).toEqual("Alex");
-  });
-   test('person with name and age', () => {
-    const person = new Person("Maria", 22);
-    expect(person.name).toEqual("Maria");
-    expect(person.age).toEqual(22);
-  });
+    personAge.convertJupiterAge();
+    expect(personAge.jupiterYears).toEqual(237.2)
+  }); 
 
