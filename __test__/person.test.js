@@ -8,25 +8,25 @@ describe('Person', () => {
     expect(personOne.age).toEqual(20);
   });
 
-  test('convert earth age to Mercury years', () => {
+  test('convert earth years to Mercury years', () => {
     const personAge = new Person("Alex", 20);
     personAge.convertMercuryAge();
     expect(personAge.mercuryYears).toEqual(4.8);
   });
 
-  test('convert earth age to Venus years', () => {
+  test('convert earth years to Venus years', () => {
     const personAge = new Person("Alex", 20);
     personAge.convertVenusAge();
     expect(personAge.venusYears).toEqual(12.4);
   });
 
-  test('convert earth age to Mars years', () => {
+  test('convert earth years to Mars years', () => {
     const personAge = new Person("Alex", 20);
     personAge.convertMarsAge();
     expect(personAge.marsYears).toEqual(37.599999999999994);
   });
 
-  test('convert earth age to Jupiter years', () => {
+  test('convert earth years to Jupiter years', () => {
     const personAge = new Person("Alex", 20);
     personAge.convertJupiterAge();
     expect(personAge.jupiterYears).toEqual(237.2)
