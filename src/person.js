@@ -47,9 +47,9 @@ export default class Person {
 
   expectancyVenus() {
     if (this.expectancy >= this.age) {
-      return `You still have ${(this.expectancy - this.age) * 1.86} years to live on Venus`;
+      return `You still have ${(this.expectancy - this.age) * .62} years to live on Venus`;
     } else {
-      return `You have lived ${(this.age - this.expectancy) * 11.86} years longer than expected`;
+      return `You have lived ${(this.age - this.expectancy) * .62} years longer than expected`;
     }
   }
 
@@ -63,30 +63,11 @@ export default class Person {
 
   expectancyJupiter() {
     if (this.expectancy >= this.age) {
-      return `You still have ${(this.expectancy - this.age) * 1.88} years to live on Jupiter`;
+      return `You still have ${(this.expectancy - this.age) * 11.86} years to live on Jupiter`;
     } else {
-      return `You have lived ${(this.age - this.expectancy) * 1.88} years longer than expected`;
+      return `You have lived ${(this.age - this.expectancy) * 11.86} years longer than expected`;
     }
   }
-  // Expectancy() {
-  //   if (this.planet === 'mer') {
-  //     this.expectancy = (this.expectancy - this.age) * .24;
-  //     return this.expectancy;
-  //   } else if (this.planet === 'ven') {
-  //     this.expectancy = (this.expectancy - this.age) * .62;
-  //     return this.expectancy;
-  //   } else if (this.planet === 'mar') {
-  //     this.expectancy = (this.expectancy - this.age) * 1.88;
-  //     return this.expectancy;
-  //   } else if (this.planet === 'jup') {
-  //     this.expectancy = (this.expectancy - this.age) * 11.86;;
-  //     return this.expectancy;
-  //   } else {
-  //     this.expectancy = (this.expectancy - this.age);
-  //     return this.expectancy;
-  //   }
-  // }
-
 
   // Active() {
   //   if (this.activity === "active") {
