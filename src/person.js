@@ -46,7 +46,11 @@ export default class Person {
   }
 
   expectancyVenus() {
-
+    if (this.expectancy >= this.age) {
+      return `You still have ${(this.expectancy - this.age) * .62} years to live on Venus`;
+    } else {
+      return `You have lived ${(this.age - this.expectancy) * .62} years longer than expected`
+    }
   }
   // Expectancy() {
   //   if (this.planet === 'mer') {
