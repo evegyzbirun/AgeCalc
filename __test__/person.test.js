@@ -63,8 +63,8 @@ describe('Person', () => {
     const person = new Person("John", 37);
     const personOld = new Person("John", 86);
     expect(person.name).toEqual("John");
-    expect(person.expectancyMars()).toEqual('You still have 24.18 years to live on Mars');
+    expect(person.expectancyMars()).toEqual('You still have 62.04 years to live on Mars');
     expect(personOld.name).toEqual("John");
-    expect(person.expectancyMars()).toEqual('You have lived  years longer than expected');
+    expect(personOld.expectancyMars()).toEqual('You have lived 30.08 years longer than expected');
   })
 });
